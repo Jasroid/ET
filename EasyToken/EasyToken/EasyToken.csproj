@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ETMaster.Master" />
     <None Include="Web.Debug.config">
@@ -85,6 +87,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\UserAccounts.cs" />
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ETMaster.Master.cs">
       <DependentUpon>ETMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -99,13 +108,30 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CSS\Dashboard\css\" />
+    <Folder Include="CSS\Dashboard\fonts\" />
+    <Folder Include="CSS\Dashboard\images\" />
+    <Folder Include="CSS\Dashboard\js\" />
+    <Folder Include="CSS\Dashboard\maps\" />
     <Folder Include="CSS\Home\css\" />
     <Folder Include="CSS\Home\images\" />
     <Folder Include="CSS\Home\js\" />
     <Folder Include="CSS\Home\webfonts\" />
+    <Folder Include="CSS\Login\css\" />
+    <Folder Include="CSS\Login\fonts\" />
+    <Folder Include="CSS\Login\js\" />
+    <Folder Include="CSS\Login\video\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
