@@ -10,8 +10,12 @@ namespace EasyToken
     public partial class Dashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+
         {
+            string adminid = Request.Cookies["UserID"].Value;
+            lblActiveTokens.Text = Classes.Tokens.ManActiveTokens(adminid);
+
 
         }
-    }
+        }
 }

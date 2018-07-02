@@ -10,7 +10,7 @@
 <!-- Custom CSS -->
 <link href="CSS/Dashboard/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Graph CSS -->
-<link href="CSS/Dashboard/css/font-awesome.css" rel="stylesheet"> 
+<link href="CSS/Dashboard/css/font-awesome.css" rel="stylesheet"/> 
 <!-- jQuery -->
 <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -40,9 +40,9 @@
 								<div class="header_top">
 									<div class="top_right">
 										<ul>
-											<li><a href="contact.html">Home</a></li>|
-											<li><a href="contact.html">Dashboard</a></li>|
-											<li><a href="checkout.html">Tokens</a></li>
+											<li><a href="Home.aspx">Home</a></li>|
+											<li><a href="Dashboard.aspx">Dashboard</a></li>|
+											<li><a href="Tokens.aspx">Tokens</a></li>
 										</ul>
 									</div>
 								
@@ -94,8 +94,8 @@
 										<li><a href="Home.aspx"><i class="fa fa-tachometer"></i> <span>Home</span></a></li>
 										 <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Tokens</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 										   <ul id="menu-academico-sub" >
-										   <li id="menu-academico-avaliacoes" ><a href="shoes.html">Add Tokens</a></li>
-											<li id="menu-academico-avaliacoes" ><a href="products.html">Edit Tokens</a></li>
+										   <li id="menu-academico-avaliacoes" ><a href="AddToken.aspx">Add Tokens</a></li>
+										
 										  </ul>
 										</li>
 										  <li id="menu-academico" ><a href="#"><i class="lnr lnr-layers"></i> <span>Messages</span> <span class="fa fa-angle-right" style="float: right"></span></a>
@@ -138,6 +138,12 @@
    <!-- /Bootstrap Core JavaScript -->
 
 
+ <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/AjaxControlToolkit/Bundle" />
+               <%-- <asp:ScriptReference Path="~/Scripts/Microsoft.ReportViewer.WebForms/Bundle" />--%>
+            </Scripts>
+        </asp:ScriptManager>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>

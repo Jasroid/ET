@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.2.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -66,6 +70,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CompanySignUp.aspx" />
+    <Content Include="CreateToken.aspx" />
+    <Content Include="CSS\Select\select2.css" />
+    <Content Include="CSS\Select\select2.min.css" />
+    <Content Include="CSS\Select\select2.min.js" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -82,11 +91,29 @@
     <Content Include="App_Data\ETDB_log.ldf">
       <DependentUpon>ETDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Home.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="UserDashboard.aspx" />
+    <Content Include="ViewToken.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Messege.cs" />
+    <Compile Include="Classes\Tokens.cs" />
     <Compile Include="Classes\UserAccounts.cs" />
+    <Compile Include="CompanySignUp.aspx.cs">
+      <DependentUpon>CompanySignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanySignUp.aspx.designer.cs">
+      <DependentUpon>CompanySignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateToken.aspx.cs">
+      <DependentUpon>CreateToken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateToken.aspx.designer.cs">
+      <DependentUpon>CreateToken.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,12 +128,12 @@
     <Compile Include="ETMaster.Master.designer.cs">
       <DependentUpon>ETMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -116,6 +143,20 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDashboard.aspx.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.designer.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewToken.aspx.cs">
+      <DependentUpon>ViewToken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewToken.aspx.designer.cs">
+      <DependentUpon>ViewToken.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CSS\Dashboard\css\" />
@@ -123,6 +164,10 @@
     <Folder Include="CSS\Dashboard\images\" />
     <Folder Include="CSS\Dashboard\js\" />
     <Folder Include="CSS\Dashboard\maps\" />
+    <Folder Include="CSS\DashMenu\css\" />
+    <Folder Include="CSS\DashMenu\fonts\" />
+    <Folder Include="CSS\DashMenu\images\" />
+    <Folder Include="CSS\DashMenu\js\" />
     <Folder Include="CSS\Home\css\" />
     <Folder Include="CSS\Home\images\" />
     <Folder Include="CSS\Home\js\" />
@@ -131,7 +176,9 @@
     <Folder Include="CSS\Login\fonts\" />
     <Folder Include="CSS\Login\js\" />
     <Folder Include="CSS\Login\video\" />
-    <Folder Include="NewFolder1\" />
+    <Folder Include="CSS\Register\css\" />
+    <Folder Include="CSS\Register\images\" />
+    <Folder Include="CSS\Register\js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

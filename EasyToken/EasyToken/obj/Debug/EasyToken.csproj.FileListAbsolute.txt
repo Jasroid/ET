@@ -18,3 +18,4 @@ C:\Users\Cresta\Desktop\DiscoveryHackthon\EasyToken\EasyToken\bin\Microsoft.Code
 C:\Users\Cresta\Desktop\DiscoveryHackthon\EasyToken\EasyToken\obj\Debug\EasyToken.csprojResolveAssemblyReference.cache
 C:\Users\Cresta\Desktop\DiscoveryHackthon\EasyToken\EasyToken\obj\Debug\EasyToken.dll
 C:\Users\Cresta\Desktop\DiscoveryHackthon\EasyToken\EasyToken\obj\Debug\EasyToken.pdb
+C:\Users\Cresta\Desktop\DiscoveryHackthon\EasyToken\EasyToken\bin\AjaxControlToolkit.dll

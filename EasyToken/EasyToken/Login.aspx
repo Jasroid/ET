@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EasyToken.Login" %>
+﻿<%@ Page EnableEventValidation="False" Language="C#" AutoEventWireup="true"  CodeBehind="Login.aspx.cs" Inherits="EasyToken.Login" %>
 
 <!DOCTYPE html>
 
@@ -12,6 +12,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="//fonts.googleapis.com/css?family=Barlow" rel="stylesheet"/>
 <link href="//fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
 </head>
+
 <body data-vide-bg="CSS/Login/video/ship.mp4">
     
     <form id="form1" runat="server">

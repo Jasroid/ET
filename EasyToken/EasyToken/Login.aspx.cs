@@ -23,8 +23,20 @@ namespace EasyToken
                 Response.Cookies.Add(usernameCookie);
                 System.Web.HttpCookie useridCookie = new HttpCookie("UserID", Classes.UserAccounts.GetID(txtusername.Text));
                 Response.Cookies.Add(usernameCookie);
-                Response.Cookies.Add(useridCookie);
-                Response.Redirect("Home.aspx");
+                System.Web.HttpCookie usertypeCookie = new HttpCookie("UserType", Classes.UserAccounts.GetUserType(txtusername.Text));
+                Response.Cookies.Add(usertypeCookie);
+
+                if (Request.Cookies["UserType"].Value == "0")
+                {
+                    Response.Redirect("UserDashboard.aspx");
+                }
+                else if (Request.Cookies["UserType"].Value == "1")
+                {
+
+                    Response.Redirect("Dashboard.aspx");
+                }
+            
+
             }
 
 

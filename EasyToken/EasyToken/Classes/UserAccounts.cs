@@ -9,14 +9,14 @@ namespace EasyToken.Classes
 {
     public class UserAccounts
     {
-        public static string Reg(string firstname, string lastname,string username, string email, string password)
+        public static string Reg(string name,string username, string email, string password)
         {
             try
             {
                 string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Users(FirstName,LastName,Username,Email,Password) values('" + firstname + "','" + lastname + "','" + username + "','" + email + "','" + password + "')", con);
+                SqlCommand cmd = new SqlCommand("insert into Users(Name,Username,Email,Password) values('" + name + "','" + username + "','" + email + "','" + password + "')", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 con.Dispose();
@@ -28,7 +28,26 @@ namespace EasyToken.Classes
                 return null;
             }
         }
-
+        public static string CompanyReg(string name, string username, string email, string password,string Address, string telephone)
+        {
+            int ty = 1;
+            //try
+            //{
+                string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into Users(Name,Username,Email,Password,Address,Telephone,Usertype) values('" + name + "','" + username + "','" + email + "','" + password + "','" + Address + "','" + telephone + "','" + ty + "')", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                con.Dispose();
+                cmd.Dispose();
+                return null;
+            //}
+            //catch (Exception e)
+            //{
+            //    return null;
+            //}
+        }
 
         public static int login(string username, string password)
         {
@@ -108,5 +127,63 @@ namespace EasyToken.Classes
                 return null;
             }
         }
+        public static string GetUserType(string username)
+        {
+            try
+            {
+                string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * From Users where Username='" + username + "'", con);
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                string userid = reader["UserType"].ToString();
+                return userid;
+                con.Close();
+                con.Dispose();
+                cmd.Dispose();
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        public static int checkusername(string username)
+        {
+
+            try
+            {
+                int exists = 0;
+                string cs = ConfigurationManager.ConnectionStrings["ConnectionString1"].ConnectionString;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * from Users where Username=@U", con);
+                cmd.Parameters.AddWithValue("U", username);
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    exists = 1;
+                    return exists;
+                }
+                else
+                {
+                    return exists;
+                }
+                con.Close();
+                con.Dispose();
+                cmd.Dispose();
+
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
+
+
+
     }
 }
