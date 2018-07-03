@@ -13,6 +13,15 @@ namespace EasyToken {
     public partial class ViewToken {
         
         /// <summary>
+        /// imgpic control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgpic;
+        
+        /// <summary>
         /// lblname control.
         /// </summary>
         /// <remarks>
@@ -47,14 +56,5 @@ namespace EasyToken {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldocnotes;
-        
-        /// <summary>
-        /// lbltokendescription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltokendescription;
     }
 }

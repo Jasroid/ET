@@ -1,5 +1,46 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ETMaster.Master" AutoEventWireup="true" CodeBehind="ViewToken.aspx.cs" Inherits="EasyToken.ViewToken" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="CSS/M/New/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!--<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />-->
+<!-- Custom Theme files -->
+<link href="CSS/M/New/css/style.css" rel='stylesheet' type='text/css' />
+<link href="CSS/M/New/css/font-awesome.css" rel="stylesheet"/> 
+<script src="CSS/M/New/js/jquery.min.js"> </script>
+<script src="CSS/M/New/js/bootstrap.min.js"> </script>
+  <script src="CSS/M/Home/js/bootstrap.js"></script>
+<!-- Mainly scripts -->
+<script src="CSS/M/js/jquery.metisMenu.js"></script>
+<script src="CSS/M/js/jquery.slimscroll.min.js"></script>
+<!-- Custom and plugin javascript -->
+<link href="CSS/M/New/css/custom.css" rel="stylesheet"/>
+<script src="CSS/M/New/js/custom.js"></script>
+<script src="CSS/M/New/js/screenfull.js"></script>
+		<script>
+		$(function () {
+			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+			if (!screenfull.enabled) {
+				return false;
+			}
+
+			
+
+			$('#toggle').click(function () {
+				screenfull.toggle($('#container')[0]);
+			});
+			
+
+			
+		});
+		</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
@@ -35,7 +76,10 @@
 
 							  
 							
-								   <div class="thumb-image"> <img src="CSS/Dashboard/images/d4.jpg"  class="img-responsive" draggable="false"> </div>
+								   <div class="thumb-image"> 
+                                       <asp:Image ID="imgpic"  class="img-responsive" draggable="false" runat="server" />
+                                    
+								   </div>
 								
 							
 								
@@ -69,20 +113,7 @@
                         <asp:Label ID="lbldocnotes" runat="server" Text="Notes"></asp:Label> 
                       
                       	</div>
-				<div class="single-bottom2">
-					<h6>Token Details</h6>
-					
-							
-		                  
-                        <asp:Label ID="lbltokendescription" runat="server" Text="token description"></asp:Label> </p>									
-							  
-							  <div class="clearfix"></div>
-					 
-						 
-						 <div class="clearfix"></div>
 				
-				   
-		   	  </div>
 	       </div>		
 	  </div>
 	<!-- end content -->

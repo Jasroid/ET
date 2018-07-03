@@ -35,11 +35,11 @@
 				</div>
 				<div class="field-agileinfo-spc form-w3-agile-text2">
                     
-                <asp:TextBox ID="txtpassword" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>	
+                <asp:TextBox ID="txtpassword"  placeholder="Password" runat="server"></asp:TextBox>	
 				</div>
                 <div class="field-agileinfo-spc form-w3-agile-text2">
                     
-                <asp:TextBox ID="txtConfirm" TextMode="Password" placeholder="Confirm Password" runat="server"></asp:TextBox>	
+                <asp:TextBox ID="txtConfirm"  placeholder="Confirm Password" runat="server"></asp:TextBox>	
 				</div>
                  
 			</div>

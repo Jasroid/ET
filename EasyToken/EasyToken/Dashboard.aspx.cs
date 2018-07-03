@@ -12,9 +12,17 @@ namespace EasyToken
         protected void Page_Load(object sender, EventArgs e)
 
         {
-            string adminid = Request.Cookies["UserID"].Value;
-            lblActiveTokens.Text = Classes.Tokens.ManActiveTokens(adminid);
+            string uid = Request.Cookies["UserID"].Value;
+            if (Request.Cookies["UserType"].Value == "1")
+            {
+                
+                lblActiveTokens.Text = Classes.Tokens.ManActiveTokens(uid);
+            }
+            else
+            {
+                lblActiveTokens.Text = Classes.Tokens.UserActiveTokens(uid);
 
+            }
 
         }
         }

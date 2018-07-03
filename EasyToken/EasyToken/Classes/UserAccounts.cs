@@ -104,6 +104,28 @@ namespace EasyToken.Classes
                 return null;
             }
         }
+        public static string getname(string username)
+        {
+            try
+            {
+                string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * From Users where Username='" + username + "'", con);
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                string name = reader["Name"].ToString();
+                return name;
+                con.Close();
+                con.Dispose();
+                cmd.Dispose();
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
 
         public static string GetID(string username)
         {
@@ -127,6 +149,31 @@ namespace EasyToken.Classes
                 return null;
             }
         }
+
+        public static string GetPic(string username)
+        {
+            try
+            {
+                string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * From Users where Username='" + username + "'", con);
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                string userid = reader["PicLocation"].ToString();
+                return userid;
+                con.Close();
+                con.Dispose();
+                cmd.Dispose();
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+
         public static string GetUserType(string username)
         {
             try

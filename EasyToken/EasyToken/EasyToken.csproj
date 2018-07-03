@@ -72,11 +72,11 @@
   <ItemGroup>
     <Content Include="CompanySignUp.aspx" />
     <Content Include="CreateToken.aspx" />
-    <Content Include="CSS\Select\select2.css" />
-    <Content Include="CSS\Select\select2.min.css" />
-    <Content Include="CSS\Select\select2.min.js" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Media\hospital.png" />
+    <Content Include="Messeges.aspx" />
+    <Content Include="NewMessege.aspx" />
     <Content Include="packages.config" />
     <Content Include="ETMaster.Master" />
     <None Include="Web.Debug.config">
@@ -92,12 +92,13 @@
       <DependentUpon>ETDB.mdf</DependentUpon>
     </Content>
     <Content Include="Register.aspx" />
-    <Content Include="UserDashboard.aspx" />
+    <Content Include="SentMesseges.aspx" />
+    <Content Include="ViewMessege.aspx" />
+    <Content Include="ViewSentMessege.aspx" />
     <Content Include="ViewToken.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Messege.cs" />
     <Compile Include="Classes\Tokens.cs" />
     <Compile Include="Classes\UserAccounts.cs" />
     <Compile Include="CompanySignUp.aspx.cs">
@@ -128,6 +129,21 @@
     <Compile Include="ETMaster.Master.designer.cs">
       <DependentUpon>ETMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Messege.cs" />
+    <Compile Include="Messeges.aspx.cs">
+      <DependentUpon>Messeges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Messeges.aspx.designer.cs">
+      <DependentUpon>Messeges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewMessege.aspx.cs">
+      <DependentUpon>NewMessege.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewMessege.aspx.designer.cs">
+      <DependentUpon>NewMessege.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -143,12 +159,26 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserDashboard.aspx.cs">
-      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    <Compile Include="SentMesseges.aspx.cs">
+      <DependentUpon>SentMesseges.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserDashboard.aspx.designer.cs">
-      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    <Compile Include="SentMesseges.aspx.designer.cs">
+      <DependentUpon>SentMesseges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMessege.aspx.cs">
+      <DependentUpon>ViewMessege.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMessege.aspx.designer.cs">
+      <DependentUpon>ViewMessege.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSentMessege.aspx.cs">
+      <DependentUpon>ViewSentMessege.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSentMessege.aspx.designer.cs">
+      <DependentUpon>ViewSentMessege.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewToken.aspx.cs">
       <DependentUpon>ViewToken.aspx</DependentUpon>
@@ -176,6 +206,8 @@
     <Folder Include="CSS\Login\fonts\" />
     <Folder Include="CSS\Login\js\" />
     <Folder Include="CSS\Login\video\" />
+    <Folder Include="CSS\M\Home\" />
+    <Folder Include="CSS\M\New\" />
     <Folder Include="CSS\Register\css\" />
     <Folder Include="CSS\Register\images\" />
     <Folder Include="CSS\Register\js\" />

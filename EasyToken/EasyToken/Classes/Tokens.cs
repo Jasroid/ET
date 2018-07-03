@@ -4,23 +4,25 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Configuration;
-
+using System.Web.UI;
+using System.Web.UI.WebControls;
 namespace EasyToken.Classes
 {
     public class Tokens
     {
 
+
         public static string ManActiveTokens(string adminid)
         {
 
-            string tokens = "<table class='table table-bordered'><thead><tr> <th>Customer</th><th>Tokens Description</th><th>Creation Date</th> </tr></thead><tbody>";
+            string tokens = "<table class='table table-bordered'><thead><tr> <th>Patient Name</th><th>Tokens Description</th><th>Creation Date</th> </tr></thead><tbody>";
 
             try
             {
                 string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Select * From Tokens where Status=1 AND OwnerID='"+adminid+"' Order by CreationDate DESC", con);
+                SqlCommand cmd = new SqlCommand("Select * From Tokens where Status=1 AND OwnerID='" + adminid + "' Order by CreationDate DESC", con);
                 SqlDataReader reader;
                 reader = cmd.ExecuteReader();
 
@@ -32,7 +34,7 @@ namespace EasyToken.Classes
                         tokens += "<tr><th scope='row'> <a href='ViewToken.aspx?T=" + reader["Id"] + "'> " + reader["CusName"];
                         tokens += "</a></th><th scope='row'>" + reader["Description"];
                         tokens += "<th scope='row'>" + reader["CreationDate"] + "</th>";
-                   
+
 
 
                     }
@@ -40,18 +42,19 @@ namespace EasyToken.Classes
                 }
                 return tokens + "</tbody></table></div>";
 
-        }
+            }
             catch (Exception e)
             {
                 return "An error occured,please try again later";
-    }
+            }
 
 
-}
+        }
+
         public static string UserActiveTokens(string userid)
         {
 
-            string tokens = "<table class='table table-bordered'><thead><tr> <th>Customer</th><th>Tokens Description</th><th>Creation Date</th> </tr></thead><tbody>";
+            string tokens = "<table class='table table-bordered'><thead><tr> <th>Patient Name</th><th>Tokens Description</th><th>Creation Date</th> </tr></thead><tbody>";
 
             try
             {

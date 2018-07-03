@@ -15,8 +15,13 @@ namespace EasyToken
             lblname.Text = Classes.Tokens.GetCusname(tokenid);
             lblappointment.Text= Classes.Tokens.GetAppointment(tokenid);
             lblmedication.Text = Classes.Tokens.GetMedication(tokenid);
-            lbltokendescription.Text = Classes.Tokens.GetTokenDesc(tokenid);
-            lbldocnotes.Text = Classes.Tokens.GetDocNotes(tokenid); 
+            lbldocnotes.Text = Classes.Tokens.GetDocNotes(tokenid);
+
+            string username = Request.Cookies["Username"].Value;
+            imgpic.ImageUrl = Classes.UserAccounts.GetPic(username);
+            imgpic.Width = 300;
+           
+            imgpic.Height = 500;
         }
     }
 }

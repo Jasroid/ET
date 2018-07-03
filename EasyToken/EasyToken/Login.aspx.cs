@@ -26,16 +26,8 @@ namespace EasyToken
                 System.Web.HttpCookie usertypeCookie = new HttpCookie("UserType", Classes.UserAccounts.GetUserType(txtusername.Text));
                 Response.Cookies.Add(usertypeCookie);
 
-                if (Request.Cookies["UserType"].Value == "0")
-                {
-                    Response.Redirect("UserDashboard.aspx");
-                }
-                else if (Request.Cookies["UserType"].Value == "1")
-                {
-
-                    Response.Redirect("Dashboard.aspx");
-                }
-            
+         Response.Redirect("Dashboard.aspx");
+       
 
             }
 
