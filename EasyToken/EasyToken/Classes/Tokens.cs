@@ -15,7 +15,7 @@ namespace EasyToken.Classes
         public static string ManActiveTokens(string adminid)
         {
 
-            string tokens = "<table class='table table-bordered'><thead><tr> <th>Patient Name</th><th>Tokens Description</th><th>Creation Date</th> </tr></thead><tbody>";
+            string tokens = "<table class='table table-bordered'><thead><tr> <th>Patient Name</th><th>NextAppointment</th><th>Creation Date</th> </tr></thead><tbody>";
 
             try
             {
@@ -32,7 +32,7 @@ namespace EasyToken.Classes
                     {
 
                         tokens += "<tr><th scope='row'> <a href='ViewToken.aspx?T=" + reader["Id"] + "'> " + reader["CusName"];
-                        tokens += "</a></th><th scope='row'>" + reader["Description"];
+                        tokens += "<th scope='row'>" + reader["NextAppointment"] + "</th>";
                         tokens += "<th scope='row'>" + reader["CreationDate"] + "</th>";
 
 
@@ -54,14 +54,14 @@ namespace EasyToken.Classes
         public static string UserActiveTokens(string userid)
         {
 
-            string tokens = "<table class='table table-bordered'><thead><tr> <th>Patient Name</th><th>Tokens Description</th><th>Creation Date</th> </tr></thead><tbody>";
+            string tokens = "<table class='table table-bordered'><thead><tr> <th>Patient Name</th><th>Creation Date</th> </tr></thead><tbody>";
 
-            try
-            {
+            //try
+            //{
                 string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Select * From Tokens where Status=1 AND UserID='" + userid + "' Order by CreationDate DESC", con);
+                SqlCommand cmd = new SqlCommand("Select * From Tokens where Status=1 AND  UserID='" + userid + "' Order by CreationDate DESC", con);
                 SqlDataReader reader;
                 reader = cmd.ExecuteReader();
 
@@ -71,7 +71,7 @@ namespace EasyToken.Classes
                     {
 
                         tokens += "<tr><th scope='row'> <a href='ViewToken.aspx?T=" + reader["Id"] + "'> " + reader["CusName"];
-                        tokens += "</a></th><th scope='row'>" + reader["Description"];
+                      
                         tokens += "<th scope='row'>" + reader["CreationDate"] + "</th>";
 
 
@@ -81,11 +81,11 @@ namespace EasyToken.Classes
                 }
                 return tokens + "</tbody></table></div>";
 
-            }
-            catch (Exception e)
-            {
-                return "An error occured,please try again later";
-            }
+            //}
+            //catch (Exception e)
+            //{
+            //    return "An error occured,please try again later";
+            //}
 
 
         }
@@ -183,6 +183,59 @@ namespace EasyToken.Classes
                 return null;
             }
         }
+
+        public static string UpdateToken( string tokenid)
+        {
+
+
+            //try
+            //{
+                string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("UPDATE Tokens SET Status=0 where Id=@tid", con);
+                cmd.Parameters.AddWithValue("tid", tokenid);
+                cmd.ExecuteNonQuery();
+                return null;
+
+
+
+            //}
+            //catch (Exception e)
+            //{
+            //    return "couldnt update pickup,please try again";
+            //}
+
+
+        }
+
+
+        public static string deletetoken(string tokenid)
+        {
+
+
+            try
+            {
+                string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("DELETE FROM Tokens WHERE Id=@I", con);
+                cmd.Parameters.AddWithValue("I", tokenid);
+                cmd.ExecuteNonQuery();
+                return null;
+
+
+
+            }
+            catch (Exception e)
+            {
+                return "couldnt delete service,please try again";
+            }
+
+
+        }
+
 
         public static string GetDocNotes(string tokenid)
         {

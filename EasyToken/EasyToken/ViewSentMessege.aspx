@@ -48,9 +48,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="page-wrapper" class="gray-bg dashbard-1">
-       <div class="content-main">
- 
+   
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>

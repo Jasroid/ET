@@ -86,7 +86,7 @@
 								<div class="header_top">
 									<div class="top_right">
 										<ul>
-											<li><a href="Home.aspx">ET</a></li>|
+											<li><a href="Login.aspx">Logout</a></li>|
 											<li><a href="#">Easy Token</a></li>
 										</ul>
 									</div>
@@ -102,9 +102,7 @@
 						
 							<div class="header">
 								<div class="head-t">
-									<div class="logo">
-										<a href="Home.aspx"><img src="images/logo.png" class="img-responsive" alt=""> </a>
-									</div>
+									
 										<!-- start header_right -->
 									<div class="header_right">
 										<div class="rgt-bottom">
@@ -113,12 +111,7 @@
 										
 										<div class="clearfix"> </div>
 									</div>
-									<div class="search">
-										<form>
-											<input type="text" value="" placeholder="search...">
-											<input type="submit" value="">
-										</form>
-									</div>
+									
 									<div class="clearfix"> </div>
 								</div>
 								<div class="clearfix"> </div>
@@ -137,17 +130,11 @@
                            <div class="menu">
 									<ul id="menu" >
 										<li><a href="Home.aspx"><i class="fa fa-tachometer"></i> <span>Home</span></a></li>
-										 <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Tokens</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-										   <ul id="menu-academico-sub" >
-										   <li id="menu-academico-avaliacoes" ><a href="AddToken.aspx">Add Tokens</a></li>
+										 <li id="menu-academico" ><a href="Dashboard.aspx"><i class="fa fa-table"></i> <span> Dashboard</span> </a>
 										
-										  </ul>
 										</li>
-										  <li id="menu-academico" ><a href="#"><i class="lnr lnr-layers"></i> <span>Messages</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-										 <ul id="menu-academico-sub" >
-											<li id="menu-academico-avaliacoes" ><a href="tabs.html">Inbox</a></li>
-											<li id="menu-academico-boletim" ><a href="calender.html">Compose</a></li>
-										  </ul>
+										  <li id="menu-academico" ><a href="Messeges.aspx"><i class="lnr lnr-layers"></i> <span>Messages</span></a>
+										 
 									 </li>
 									
 								  </ul>

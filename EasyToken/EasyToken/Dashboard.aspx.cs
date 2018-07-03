@@ -13,6 +13,7 @@ namespace EasyToken
 
         {
             string uid = Request.Cookies["UserID"].Value;
+
             if (Request.Cookies["UserType"].Value == "1")
             {
                 

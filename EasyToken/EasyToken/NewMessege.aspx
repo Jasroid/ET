@@ -44,9 +44,8 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div id="page-wrapper" class="gray-bg dashbard-1">
-       <div class="content-main">
- 
+      
+
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>
@@ -94,7 +93,7 @@
       <br/>
       <asp:TextBox ID="txtbody" class="form-control1 control2" placeholder="Message :" runat="server" Height="113px" Width="356px"></asp:TextBox>
       <br/>
-      <asp:Button ID="btnsend" class="btn btn-sm btn-warning warning_33" ForeColor="white" BackColor="#FF9933" runat="server" Text="Send Messege" OnClick="btnsend_Click" />
+      <asp:Button ID="btnsend" class="btn btn-sm btn-warning warning_33" ForeColor="white" BackColor="#b52e31" runat="server" Text="Send Messege" OnClick="btnsend_Click" />
 
 											
 											

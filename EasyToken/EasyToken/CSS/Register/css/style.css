@@ -243,7 +243,7 @@ h1 {
     margin: 3.5vw 0vw 2vw;
     font-weight: 300;
     text-transform: capitalize;
-    color: #fff;
+    color: #b52e31;
     text-shadow: 3px 3px 3px #1d1d1d;
     letter-spacing: 5px;
     text-align: center;
@@ -254,14 +254,14 @@ h2.sub-heading-agileits,
 h3.sub-heading-agileits {
     text-align: center;
     font-size: 24px;
-    color: #23b4cc;
+    color: #fff;
     text-transform: capitalize;
     margin-bottom: 14px;
     padding: 0.4vw;
     padding: 7px;
     font-weight: 300;
     letter-spacing: 2px;
-    background: rgba(255, 255, 255, 0.05);
+    background: #b52e31;
     border-radius: 50px;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.86);
     font-family: 'Source Sans Pro', sans-serif;
@@ -293,7 +293,7 @@ h3.sub-heading-agileits {
 }
 
 .radio-buttons-w3-agileits li label {
-    color: #23b4cc;
+    color:  #b52e31;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -324,7 +324,7 @@ select.form-control,
 input#datepicker {
     width: 100%;
     font-weight: 300;
-    color: #fff;
+    color: #000;
     font-size: 16px;
     letter-spacing: 1.2px;
     padding: 10px 10px;
@@ -375,7 +375,7 @@ select.form-control option {
 }
 
 .register-form-w3layouts input[type="submit"] {
-    background: #23b4cc;
+    background: #b52e31;
 }
 
 .register-form-w3layouts input[type="reset"] {

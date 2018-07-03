@@ -16,7 +16,14 @@ namespace EasyToken
 
         protected void btnsearch_Click(object sender, EventArgs e)
         {
-            lblpatientlist.Text = Classes.Tokens.SearchUsers(txtsearch.Text);
+        }
+
+        protected void btncreate_Click(object sender, EventArgs e)
+        {
+            string userid = Classes.UserAccounts.GetID(cbusers.SelectedValue);
+            string usname = Classes.UserAccounts.getname(cbusers.SelectedValue);
+            Classes.Request.Req(userid,usname, Request.Cookies["Username"].Value,Request.Cookies["UserID"].Value,txtnote.Text,txtappointment.Text,txtMedication.Text);
+            Response.Redirect("Dashboard.aspx");
         }
     }
 }

@@ -44,10 +44,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-		 <!--/content-inner-->
-	<div class="left-content">
-	   <div class="inner-content">
-		<!-- header-starts -->
+	
 			
 				<!--content-->
 			<div class="content">
@@ -99,20 +96,17 @@
 						
 						</div>
 				
-					<div class="btn_form">
-						<a href="checkout.html">Message</a>
-					</div>
+				
 				<p>	<u>Doctors Notes</u></p>
-					
+					 <asp:Label ID="lbldocnotes" runat="server" Text="Notes"></asp:Label> 
 			   	 </div>
+                      	<div class="btn_form">
+                              <asp:Button visibility="false" ID="btndeletetoken" runat="server" Text="Delete Token" OnClick="btndeletetoken_Click" />
+				<asp:Button visibility="false" ID="btndeactivate" runat="server" Text="Deactivate Token" OnClick="btndeactivate_Click"  />
+                              	</div>
           	    <div class="clearfix"></div>
           	   </div>
-          	    <div class="single-bottom1">
-				
-                      
-                        <asp:Label ID="lbldocnotes" runat="server" Text="Notes"></asp:Label> 
-                      
-                      	</div>
+          	  
 				
 	       </div>		
 	  </div>

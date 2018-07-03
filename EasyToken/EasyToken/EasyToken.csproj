@@ -93,12 +93,14 @@
     </Content>
     <Content Include="Register.aspx" />
     <Content Include="SentMesseges.aspx" />
+    <Content Include="ViewRequests.aspx" />
     <Content Include="ViewMessege.aspx" />
     <Content Include="ViewSentMessege.aspx" />
     <Content Include="ViewToken.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Request.cs" />
     <Compile Include="Classes\Tokens.cs" />
     <Compile Include="Classes\UserAccounts.cs" />
     <Compile Include="CompanySignUp.aspx.cs">
@@ -165,6 +167,13 @@
     </Compile>
     <Compile Include="SentMesseges.aspx.designer.cs">
       <DependentUpon>SentMesseges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRequests.aspx.cs">
+      <DependentUpon>ViewRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRequests.aspx.designer.cs">
+      <DependentUpon>ViewRequests.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewMessege.aspx.cs">
       <DependentUpon>ViewMessege.aspx</DependentUpon>

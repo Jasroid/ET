@@ -37,14 +37,17 @@
 				</div>
 				<div class="field-agileinfo-spc form-w3-agile-text2">
                     
-                <asp:TextBox ID="txtpassword" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>	
+                <asp:TextBox ID="txtpassword"  placeholder="Password" runat="server"></asp:TextBox>	
 				</div>
-                <div class="field-agileinfo-spc form-w3-agile-text2">
-                    
-                <asp:TextBox ID="txtConfirm" TextMode="Password" placeholder="Confirm Password" runat="server"></asp:TextBox>	
-				</div>
+              
                  
 			</div>
+            <div class="main-flex-w3ls-sectns">
+                  <div class="field-agileinfo-spc form-w3-agile-text1">
+                    
+                <asp:TextBox ID="txtConfirm"  placeholder="Confirm Password" runat="server"></asp:TextBox>	
+				</div>
+            </div>
   <br/>
                 <div class="clear"></div>
                 <asp:Button ID="btnregister" class="sub-heading-agileits" Text="Create Account" runat="server" OnClick="btnregister_Click"></asp:Button>

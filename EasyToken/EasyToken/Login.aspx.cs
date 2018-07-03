@@ -22,7 +22,7 @@ namespace EasyToken
                 System.Web.HttpCookie usernameCookie = new HttpCookie("Username", Classes.UserAccounts.GetUsername(txtusername.Text));
                 Response.Cookies.Add(usernameCookie);
                 System.Web.HttpCookie useridCookie = new HttpCookie("UserID", Classes.UserAccounts.GetID(txtusername.Text));
-                Response.Cookies.Add(usernameCookie);
+                Response.Cookies.Add(useridCookie);
                 System.Web.HttpCookie usertypeCookie = new HttpCookie("UserType", Classes.UserAccounts.GetUserType(txtusername.Text));
                 Response.Cookies.Add(usertypeCookie);
 

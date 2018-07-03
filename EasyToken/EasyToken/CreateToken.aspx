@@ -21,10 +21,17 @@
                                                    <br/>  
 											
                                                 	<div class="col-sm-2 hp">
-                                                        <asp:TextBox ID="txtsearch" placeholder="Patient Name" runat="server"></asp:TextBox><asp:Button ID="btnsearch" runat="server" Text="Search" OnClick="btnsearch_Click" />
                                                         <br/>
-                                                        <asp:Label ID="lblpatientlist" runat="server" Text=""></asp:Label>
-												</div>
+                                                        <cc1:ComboBox ID="cbusers" runat="server" DataSourceID="SqlDataSource1" DataTextField="Username" DataValueField="Username" MaxLength="0" style="display: inline;" AutoCompleteMode="SuggestAppend" DropDownStyle="DropDownList"></cc1:ComboBox>
+
+                                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ETDBConnectionString1 %>" SelectCommand="Select Username from Users where (UserType=0)"></asp:SqlDataSource>
+												<br/>
+
+                                                  <asp:TextBox ID="txtMedication" placeholder="Medication" runat="server"></asp:TextBox>
+                                                <br/>  <asp:TextBox ID="txtappointment" placeholder="Next Appointment" runat="server"></asp:TextBox>
+                                                  <br/><asp:TextBox ID="txtnote" placeholder="Notes" runat="server"></asp:TextBox>
+                                                      <br/>  <asp:Button ID="btncreate" runat="server" Text="Create Token" OnClick="btncreate_Click" />
+                                                           </div>
 												<div class="clearfix">
                                                     </div>
 											</div>
