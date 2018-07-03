@@ -149,7 +149,7 @@ namespace EasyToken.Classes
                     while (reader.Read())
                     {
 
-                        messegeList += "<tr class='table-row'> <td class='table-text'><h6><a href='ViewSentMessege.aspx?M=" + reader["Id"] + "'>" + reader["Subject"] + "</a></h6></td>";
+                        messegeList += "<tr class='table-row'> <td class='table-text'><h6><a href='ViewSentMessege.aspx?SM=" + reader["Id"] + "'>" + reader["Subject"] + "</a></h6></td>";
                         messegeList += "<td>" + reader["Status"] + "</td>";
                         messegeList += "<td class='march'>" + reader["DateTime"] + "</td></tr>";
 
@@ -211,7 +211,7 @@ namespace EasyToken.Classes
 
 
 
-        public static string viewmessege(string userId)
+        public static string viewmessege(string messegeid)
         {
 
               string m = "";
@@ -223,14 +223,14 @@ namespace EasyToken.Classes
         SqlConnection con = new SqlConnection(cs);
         con.Open();
         SqlCommand comm = new SqlCommand("Select * from Messeges where Id=@I", con);
-        comm.Parameters.AddWithValue("I", userId);
+        comm.Parameters.AddWithValue("I", messegeid);
         SqlDataReader reader;
         reader = comm.ExecuteReader();
         reader.Read();
 
-        m += reader["Subject"] + "<br/><br/>";
-        m += reader["Body"] + "<br/><br/>";
-        m += "from: " + reader["FromName"] + "<br/>" +reader["DateTime"];
+        m += "Subject: " + reader["Subject"] + "<br/><br/>";
+        m +=  reader["Body"] + "<br/><br/>";
+        m += "from: " + reader["FromName"] + "<br/>"+ "Date: "  +reader["DateTime"];
 
             return m;
      //  }

@@ -18,7 +18,7 @@
 	<div class="register-form-w3layouts">
 		<!-- Form starts here -->
 		<form action="#" method="post"> 
-			<h3 class="sub-heading-agileits">Patient Registration</h3>
+			<h3 class="sub-heading-agileits">Hospital Registration</h3>
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
                     
@@ -63,15 +63,12 @@
                         <div class="clear"></div>
 		<br/>
 	
-			<div font-color="white">OR Click <a href="CompanySignUp.aspx">here </a> to Register as a Hospital/Company</div>
+			<div style="color:white""> Click <a href="Register.aspx">here </a> to Register as a Patient Or <a href="Login.aspx">Login</a></div>
 		</form>
 		<!--// Form starts here -->
 	</div>
 	<!--copyright-->
-	<div class="copyright">
-		<p>&copy;Easy Token | 2018
-		</p>
-	</div>
+
 	<!--//copyright-->
 	<script type="text/javascript" src="CSS/Registerjs/jquery-2.2.3.min.js"></script>
 	<!-- Calendar Js -->

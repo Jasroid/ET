@@ -97,13 +97,14 @@
 						</div>
 				
 				
-				<p>	<u>Doctors Notes</u></p>
+				<p>	<u>Latest Doctor Note</u></p>
 					 <asp:Label ID="lbldocnotes" runat="server" Text="Notes"></asp:Label> 
-			   	 </div>
+			   	 
                       	<div class="btn_form">
-                              <asp:Button visibility="false" ID="btndeletetoken" runat="server" Text="Delete Token" OnClick="btndeletetoken_Click" />
-				<asp:Button visibility="false" ID="btndeactivate" runat="server" Text="Deactivate Token" OnClick="btndeactivate_Click"  />
-                              	</div>
+                              
+                              <asp:Button visibility="false"  class="btn btn-sm btn-warning warning_33" ForeColor="white" BackColor="#b52e31" ID="btndeletetoken" runat="server" Text="Delete Token" OnClick="btndeletetoken_Click" />
+				<asp:Button visibility="false"  class="btn btn-sm btn-warning warning_33" ForeColor="white" BackColor="#b52e31" ID="btndeactivate" runat="server" Text="Deactivate Token" OnClick="btndeactivate_Click"  />
+                              	</div></div>
           	    <div class="clearfix"></div>
           	   </div>
           	  
@@ -112,16 +113,9 @@
 	  </div>
 	<!-- end content -->
 	
-<div class="footer">
-				
-					<div class="clearfix"> </div>
-						<p>© 2016 Gretong. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-			</div>
 </div>
 
 </div>
 			<!--content-->
-		</div>
-</div>
-			<!--content-->
+	
 </asp:Content>

@@ -73,6 +73,7 @@
     <Content Include="CompanySignUp.aspx" />
     <Content Include="CreateToken.aspx" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Media\hospital.png" />
     <Content Include="Messeges.aspx" />
@@ -132,6 +133,13 @@
       <DependentUpon>ETMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Classes\Messege.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Messeges.aspx.cs">
       <DependentUpon>Messeges.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,7 +218,6 @@
     <Folder Include="CSS\Home\css\" />
     <Folder Include="CSS\Home\images\" />
     <Folder Include="CSS\Home\js\" />
-    <Folder Include="CSS\Home\webfonts\" />
     <Folder Include="CSS\Login\css\" />
     <Folder Include="CSS\Login\fonts\" />
     <Folder Include="CSS\Login\js\" />

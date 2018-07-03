@@ -13,7 +13,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="//fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
 </head>
 
-<body data-vide-bg="CSS/Login/video/ship.mp4">
+<body style="background-image:url(CSS/Register/images/banner.jpg)">
     
     <form id="form1" runat="server">
 <section class="login-maintop">
@@ -32,27 +32,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   
                 <asp:Button ID="btnlogin" runat="server" Text="Login" OnClick="btnlogin_Click" />
 
+
 			</form>
-			<div class="login-password">
-				<span><a href="#">forgot password</a></span>
-			</div>
-			<div class="login-input">
+		
+		
+		<p style="color:white">	Dont Have An Account?Register <a href="Register.aspx">Here</a> </p>
+	
 			
-			</div>
-			<div class="social-icons">
-				<ul>
-					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-				</ul>
-				
-			</div>
-		</div>
-		<!--footer-->
-		<div class="footer">
-			<p>&copy;Easy Token| 2018</p>
-		</div>
-		<!--//footer-->
+		
+	
 	</div>
 </section>
 <script type="CSS/Login/text/javascript" src="js/jquery-2.1.4.min.js"></script>

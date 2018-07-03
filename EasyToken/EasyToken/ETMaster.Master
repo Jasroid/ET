@@ -72,8 +72,18 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            left: 34px;
+            top: 0px;
+            width: 108px;
+            height: 12px;
+        }
+    </style>
 </head>
 <body>
+  
+                        </div>
     <form id="form1" runat="server">
    <!--/content-inner-->
 	<div class="left-content">
@@ -87,7 +97,7 @@
 									<div class="top_right">
 										<ul>
 											<li><a href="Login.aspx">Logout</a></li>|
-											<li><a href="#">Easy Token</a></li>
+											<li><asp:Label ID="lbluser" runat="server" Text=""></asp:Label></li>
 										</ul>
 									</div>
 								
@@ -133,8 +143,9 @@
 										 <li id="menu-academico" ><a href="Dashboard.aspx"><i class="fa fa-table"></i> <span> Dashboard</span> </a>
 										
 										</li>
-										  <li id="menu-academico" ><a href="Messeges.aspx"><i class="lnr lnr-layers"></i> <span>Messages</span></a>
-										 
+										  <li id="menu-academico" ><a href="Messeges.aspx"><i class="lnr lnr-layers"></i> <span>Messages</span></a></li>
+										  <li id="menu-academico" ><a href="CreateToken.aspx"> <span> <asp:Label ID="lblcreate" runat="server" Text="<i class='fa fa-table' ></i> Add Token"></asp:Label></span> </a>
+										
 									 </li>
 									
 								  </ul>

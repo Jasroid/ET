@@ -57,15 +57,12 @@
                         <div class="clear"></div>
 		<br/>
 	
-			<div font-color="white">OR Click <a href="CompanySignUp.aspx">here </a> to Register as a Hospital/Company</div>
+			<div style="color:white">OR Click <a href="CompanySignUp.aspx">here </a> to Register as a Hospital/Company</div>
 		</form>
 		<!--// Form starts here -->
 	</div>
 	<!--copyright-->
-	<div class="copyright">
-		<p>&copy;Easy Token | 2018
-		</p>
-	</div>
+	
 	<!--//copyright-->
 	<script type="text/javascript" src="CSS/Registerjs/jquery-2.2.3.min.js"></script>
 	<!-- Calendar Js -->

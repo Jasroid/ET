@@ -64,7 +64,7 @@
            	 <div class="profile">
                     <div class="col-md-4 compose">
 	
-            <h2><a href="NewMessege.aspx"> <asp:Label ID="lblcompose" ForeColor="White" runat="server" Text="Compose"></asp:Label></a></h2>
+            <h2><a href="NewMessege.aspx"> <asp:Label ID="lblcompose" ForeColor="White" runat="server" Text="New Messege"></asp:Label></a></h2>
     <nav class="nav-sidebar">
 		<ul class="nav tabs">
           <li class="active"><asp:LinkButton ID="btninbox" runat="server" ForeColor="Gray" OnClick="btninbox_Click"><i class="fa fa-inbox"></i>Inbox<asp:Label ID="lblinboxnum" runat="server" Text="0"></asp:Label></asp:LinkButton></li>

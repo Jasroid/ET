@@ -15,7 +15,7 @@ namespace EasyToken.Classes
         public static string ManActiveTokens(string adminid)
         {
 
-            string tokens = "<table class='table table-bordered'><thead><tr> <th>Patient Name</th><th>NextAppointment</th><th>Creation Date</th> </tr></thead><tbody>";
+            string tokens = "<table class='table table-bordered'><thead><tr> <th>Patient Name</th><th>Next Appointment</th><th>Creation Date</th> </tr></thead><tbody>";
 
             try
             {

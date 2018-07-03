@@ -28,41 +28,7 @@ namespace EasyToken.Classes
             //}
         }
 
-        public static string viewrequests(string adminid)
-        {
-
-            string tokens = "<ul>";
-            //try
-            //{
-                string cs = ConfigurationManager.ConnectionStrings["ETDBConnectionString1"].ConnectionString;
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Select * From Requests where Status=0 AND HospitalID='" + adminid + "' Order by CreationDate DESC", con);
-                SqlDataReader reader;
-                reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-
-                        tokens += "<li><a href='ViewToken.aspx?T=" + reader["Id"] + "'> " + reader["UserName"]+"</a></li>";
-                      
-                
-
-                    }
-                    return tokens;
-                }
-                return tokens + "</ul>";
-
-           // }
-            //catch (Exception e)
-            //{
-            //    return "An error occured,please try again later";
-            //}
-
-
-        }
+      
 
 
 

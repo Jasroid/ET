@@ -37,7 +37,7 @@ namespace EasyToken
             imgpic.ImageUrl = Classes.UserAccounts.GetPic(username);
             imgpic.Width = 300;
            
-            imgpic.Height = 500;
+            imgpic.Height = 400;
         }
 
         protected void btndeletetoken_Click(object sender, EventArgs e)

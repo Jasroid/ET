@@ -18,13 +18,16 @@ namespace EasyToken
             {
                 
                 lblActiveTokens.Text = Classes.Tokens.ManActiveTokens(uid);
+            
             }
             else
             {
                 lblActiveTokens.Text = Classes.Tokens.UserActiveTokens(uid);
-
+             
             }
 
         }
-        }
+
+      
+    }
 }

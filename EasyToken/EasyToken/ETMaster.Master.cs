@@ -11,7 +11,19 @@ namespace EasyToken
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           if (Request.Cookies["UserType"].Value == "1")
+            {
+                lblcreate.Visible = true;
+            }
+            else
+            {
+                lblcreate.Visible = false;
+
+            }
+            lbluser.Text = Request.Cookies["Username"].Value;
 
         }
+
+    
     }
 }
